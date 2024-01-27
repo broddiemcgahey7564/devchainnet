@@ -1,6 +1,6 @@
 {
   "name": "devchainnet",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Advanced user interface components for web3 applications.",
   "main": "dist/index.js",
   "files": [
