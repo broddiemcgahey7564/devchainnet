@@ -12,7 +12,6 @@ import Icon_search from '../icons/search.js';
 
 // UTILS
 import UTILS from '../../utils/index.js';
-import UTILS_API from '../../utils/api.js';
 
 // STYLES
 import style from './style.module.css';

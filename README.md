@@ -48,7 +48,7 @@
 - Exceptionally simple to integrate
 - Stable & Realiable with minimal 3rd party modules
 - Web3 wallet utilities (connect/login/sign)
-- Tools to help you simplify your development
+- Tools to help you simplify your blockchain development
 
 ... and much more. Check the [official DevChainNet docs](https://docs.devchain.net/) for more details.
 

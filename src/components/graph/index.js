@@ -2,9 +2,6 @@
 import React from 'react';
 import cn from 'classnames';
 
-// CONTEXT
-import { Context } from '../../context';
-
 // STYLES
 import style from './style.module.css';
 
@@ -17,8 +14,6 @@ export async function getServerSideProps() {
 
 // CLIENT SIDE
 class Graph extends React.Component {
-  static contextType = Context;
-
   constructor(props) {
     super(props);
     this.state = {};

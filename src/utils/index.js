@@ -1,9 +1,6 @@
 // MODULES
 import Web3 from 'web3';
 
-// CONFIG
-import config from '../config';
-
 /*
  * UTILS
  * Allmost none of the utility functions changes the global context. Keep the context update as minimum as possible for unintended results.
