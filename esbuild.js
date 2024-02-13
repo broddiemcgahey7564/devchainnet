@@ -15,7 +15,7 @@ esbuild
     treeShaking: true,
     platform: 'node',
     format: 'cjs',
-    target: 'node14',
+    target: 'node18',
     plugins: [
       esbuild_node_external.nodeExternalsPlugin(),
       esbuild_css_modules({

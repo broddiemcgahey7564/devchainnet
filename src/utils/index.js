@@ -1,6 +1,9 @@
 // MODULES
 import Web3 from 'web3';
 
+// CONFIG
+import config from '../config';
+
 /*
  * UTILS
  * Allmost none of the utility functions changes the global context. Keep the context update as minimum as possible for unintended results.
@@ -235,10 +238,66 @@ export function str_extract_dom(data, identifier) {
   return final;
 }
 
+///////////////////////////////
+// Number functions
+///////////////////////////////
+export function fhandle(f, length = 2) {
+  // TODO: edit length parameter usage in body
+  let str = '0.'; // final value for multiple scenarios
+  f = f.toString();
+
+  if (!f.includes('e-')) {
+    f = Number(f);
+
+    if (!f) {
+      return f;
+    }
+
+    if (f >= 1) {
+      return f.toFixed(length);
+    }
+
+    f = f.toString().split('.')[1]; // value after the "."
+
+    let ctr = 0;
+    for (let i = 0; i < f.length; i++) {
+      if (f[i] !== '0' || ctr) {
+        ctr++;
+      }
+
+      str += f[i];
+
+      if (ctr >= length) {
+        break;
+      }
+    }
+
+    return str;
+  }
+
+  const parts = f.split('e-');
+  const decimals = Number(parts[1]) - 1; // zeros that will be placed after the "0."
+  const value = parts[0].replace('.', '');
+
+  for (let i = 0; i < decimals; i++) {
+    str += '0';
+  }
+
+  for (let i = 0; i < value.length; i++) {
+    str += value[i];
+
+    if (i + 1 >= length) {
+      break;
+    }
+  }
+
+  return str;
+}
+
 ////////////////////////////////
 // Web3
 ////////////////////////////////
-export async function web3_wallet_connect(chain_id = 1) {
+export async function web3_wallet_connect(chain_id) {
   if (!window.ethereum) {
     return null;
   }
@@ -251,10 +310,13 @@ export async function web3_wallet_connect(chain_id = 1) {
   //get the connected accounts
   const accounts = await web3.eth.getAccounts();
 
-  await ethereum.request({
-    method: 'wallet_switchEthereumChain',
-    params: [{ chainId: web3.utils.toHex(chain_id) }],
-  });
+  if (chain_id) {
+    // if specified, try to switch to that chain after connection
+    await ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: web3.utils.toHex(chain_id) }],
+    });
+  }
 
   return accounts;
 }
@@ -275,6 +337,7 @@ export async function web3_get_token_decimals(address, abi) {
   }
 
   const web3 = new Web3(window.ethereum);
+
   const contract = new web3.eth.Contract(abi, address);
   const decimals = await contract.methods.decimals().call();
   return decimals;
@@ -286,6 +349,7 @@ export default {
   str_remove_space,
   str_type,
   str_extract_dom,
+  fhandle,
   web3_wallet_connect,
   web3_wallet_listen,
   web3_get_token_decimals,

@@ -1,17 +1,21 @@
 {
   "name": "devchainnet",
-  "version": "1.0.28",
-  "description": "Advanced user interface components for web3 applications.",
+  "version": "1.0.305",
+  "description": "Advanced blockchain components for full stack web3 applications.",
+  "type": "module",
+  "source": "src/index.js",
   "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && node esbuild.js"
+    "build": "microbundle"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevChainNet/DevChainNet.git"
+    "url": "git+https://github.com/DevChainNet/DevChainnet.git"
   },
   "keywords": [
     "web3",
@@ -20,17 +24,15 @@
     "blockchain",
     "user-interface"
   ],
-  "author": "Developer Chain Network",
+  "author": "DevChain.net",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DevChainNet/DevChainNet/issues"
+    "url": "https://github.com/DevChainnet/DevChainnet/issues"
   },
-  "homepage": "https://github.com/DevChainNet/DevChainNet#readme",
+  "homepage": "https://github.com/DevChainnet/DevChainnet#readme",
   "dependencies": {
     "axios": "^1.6.7",
     "classnames": "^2.5.1",
-    "esbuild-css-modules-plugin": "^3.1.0",
-    "esbuild-node-externals": "^1.12.0",
     "react": ">=16",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
@@ -41,5 +43,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1"
   }
 }

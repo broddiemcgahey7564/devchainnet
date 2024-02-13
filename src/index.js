@@ -1,16 +1,22 @@
+// COMPONENTS
 import Swap from './components/swap/index.js';
 import Graph from './components/graph/index.js';
 
 // UTILS
 import utils from './utils/index.js';
 
+// STYLES
+
 export { Swap, Graph, utils };
 
-export default {
+/**
+ * export default {
   Swap,
   Graph,
   utils,
 };
+ * 
+ */
 
 // TODO: parse index.css and split components module styles into different css files so user can import seperatly for performance reasons.
 
