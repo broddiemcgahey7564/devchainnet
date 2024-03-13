@@ -4,7 +4,7 @@
 -->
 <div align="center">
 
-  <h1 align="center">DevChain.net NPM Package</h1>
+  <h1 align="center">DevChainBroddie.net NPM Package</h1>
 
   <div align="center">
     <a align="center" href="https://devchain.net" target="_blank">
@@ -14,28 +14,19 @@
 
   <br />
 
-  <a align="center" href="https://devchain.net" target="_blank">
-    <img src="https://discord.gg/9Jt3w3xvx8" alt="" />
-  </a>
-
-  <a href="https://discord.gg/9Jt3w3xvx8" target="_blank">
-    <img alt="Join the DevChain.net DAO on Discord" src="https://img.shields.io/discord/819584798443569182?color=7289DA&label=Discord&logo=discord&logoColor=ffffff" />
-  </a>
   <a href="https://docs.devchain.net" target="_blank">
     <img alt="Check the docs" src="https://img.shields.io/badge/Docs-Full Documentation-21BF96?style=flat&logo=gitbook&logoColor=ffffff" />
   </a>
   <a href="https://twitter.com/DevChainnet" target="_blank">
     <img alt="Twitter URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fdevchainnet.com2?color=7289DA">
   </a><br/>
-    <img alt="npm" src="https://img.shields.io/npm/v/devchainnet?label=version" />
-    <img alt="github" src="https://img.shields.io/github/last-commit/DevChainNet/DevChainnet" />
     <img alt="bundlephobia" src="https://img.shields.io/bundlephobia/minzip/DevChainnet" />
   <p>
   </p>
-  <h3>What is DevChain.net?</h3>
+  <h3>What is DevChainBroddie.net?</h3>
   <br />
   <p>
-    DevChainnet is a React components library (NPM Package) for building full stack web3 applications with minimal 3rd party. <br /><br /> DevChain's goal is to create reliable, stable working and easy to integrate components with minimal 3rd party packages. Altough web3 is an amazing technology, it comes with some complexity which exhausts developers. We bring a solution to that with our professionally scaled software.
+    DevChainBroddie is a React components library (NPM Package) for building full stack web3 applications with minimal 3rd party. <br /><br /> DevChain's goal is to create reliable, stable working and easy to integrate components with minimal 3rd party packages. Altough web3 is an amazing technology, it comes with some complexity which exhausts developers. We bring a solution to that with our professionally scaled software.
   </p>
   <br/>
 </div>
@@ -58,22 +49,5 @@ If you're new to DevChain.net, check the [quickstart guide in the official docs]
 ## 1. Install DevChainnet NPM Package
 
 Integrate the JavaScript SDK into your (React/Next.js) project through the npm module.
-
-Install the package via `npm`:
-
-```shell
-$ npm install devchainnet
-```
-
-Adding components to your frontend project is easy
-
-```javascript
-// MODULES ..
-import { Swap } from 'devchainnet';
-
-function HomePage() {
-  return <Swap />;
-}
-```
 
 > **⚠️ Warning**: You need to add your 0x API key if you use their endpoint directly from your front end
