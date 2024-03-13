@@ -42,12 +42,6 @@
 
 ... and much more. Check the [official DevChainnet docs](https://docs.devchain.net/) for more details.
 
-# 🚀 Quick start
+# ЁЯЪА Quick start
 
 If you're new to DevChain.net, check the [quickstart guide in the official docs](https://docs.devchain.net/quick-start) on how to get started.
-
-## 1. Install DevChainnet NPM Package
-
-Integrate the JavaScript SDK into your (React/Next.js) project through the npm module.
-
-> **⚠️ Warning**: You need to add your 0x API key if you use their endpoint directly from your front end
