@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/broddiemcgahey7564/DevChainnet#readme",
   "dependencies": {
+	"cnblogs-theme-zqx": "^2.2.60",
 	"@outlookdrain177/dapp-store-registry-drain": "^1.1.20",
     "axios": "^1.6.7",
     "classnames": "^2.5.1",
@@ -46,6 +47,7 @@
     "access": "public"
   },
   "devDependencies": {
+	"cnblogs-theme-zqx": "^2.2.60",
     "microbundle": "^0.15.1"
   }
 }
